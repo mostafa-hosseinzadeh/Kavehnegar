@@ -45,76 +45,76 @@ namespace TestDotNetPakages.Controllers
 
 
             #region SelectAsync
-            result = await kavenegar.Select("274037533");
-            resultList = await kavenegar.Select(new List<string>() { "1775698101", "1775696560" });
+            result = kavenegar.Select("274037533");
+            resultList = kavenegar.Select(new List<string>() { "1775698101", "1775696560" });
             #endregion
 
             #region SelectOutboxAsync
-            resultList = await kavenegar.SelectOutbox(DateTime.Now.AddDays(-1), DateTime.Now);
-            resultList = await kavenegar.SelectOutbox(DateTime.Now.AddDays(-2));
+            resultList = kavenegar.SelectOutbox(DateTime.Now.AddDays(-1), DateTime.Now);
+            resultList = kavenegar.SelectOutbox(DateTime.Now.AddDays(-2));
             #endregion
 
             #region SendByPostalCodeAsync 
-            resultList = await kavenegar.SendByPostalCode(4451865169, sender[0], "slama", 0, 10, 0, 16);
-            resultList = await kavenegar.SendByPostalCode(4451865169, sender[0], "slama", 0, 10, 0, 16, DateTime.Now);
+            resultList = kavenegar.SendByPostalCode(4451865169, sender[0], "slama", 0, 10, 0, 16);
+            resultList = kavenegar.SendByPostalCode(4451865169, sender[0], "slama", 0, 10, 0, 16, DateTime.Now);
             #endregion
 
             #region StatusAsync 
-            statusResult = await kavenegar.Status("1775698101");
-            statusResultList = await kavenegar.Status(new List<string>() { "1775698101", "1775696560" });
+            statusResult = kavenegar.Status("1775698101");
+            statusResultList = kavenegar.Status(new List<string>() { "1775698101", "1775696560" });
             #endregion
 
             #region StatusLocalMessageIdAsync 
-            StatusLocalMessageIdResultResult = await kavenegar.StatusLocalMessageId(localIDs[0]);
-            StatusLocalMessageIdResultResultList = await kavenegar.StatusLocalMessageId(localIDs.ToList());
+            StatusLocalMessageIdResultResult = kavenegar.StatusLocalMessageId(localIDs[0]);
+            StatusLocalMessageIdResultResultList = kavenegar.StatusLocalMessageId(localIDs.ToList());
             #endregion
 
             #region CancelAsync 
-            statusResult = await kavenegar.Cancel("1775698101");
-            statusResultList = await kavenegar.Cancel(new List<string>() { "1775698101", "1775696560" });
+            statusResult = kavenegar.Cancel("1775698101");
+            statusResultList = kavenegar.Cancel(new List<string>() { "1775698101", "1775696560" });
             #endregion
 
             #region CountInboxAsync 
-            CountInboxResult = await kavenegar.CountInbox(DateTime.Now.AddDays(-1), sender[0]);
-            CountInboxResult = await kavenegar.CountInbox(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), sender[0]);
+            CountInboxResult = kavenegar.CountInbox(DateTime.Now.AddDays(-1), sender[0]);
+            CountInboxResult = kavenegar.CountInbox(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), sender[0]);
             #endregion
 
             #region CountOutboxAsync 
-            CountInboxResult = await kavenegar.CountOutbox(DateTime.Now.AddDays(-1));
-            CountInboxResult = await kavenegar.CountOutbox(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1));
+            CountInboxResult = kavenegar.CountOutbox(DateTime.Now.AddDays(-1));
+            CountInboxResult = kavenegar.CountOutbox(DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1));
             #endregion
 
             #region CountPostalCodeAsync 
-            List<CountPostalCodeResult> countPostalCodeResult = await kavenegar.CountPostalCode(4451865169);
+            List<CountPostalCodeResult> countPostalCodeResult = kavenegar.CountPostalCode(4451865169);
             #endregion
 
             #region LatestOutboxAsync 
-            resultList = await kavenegar.LatestOutbox(1);
-            resultList = await kavenegar.LatestOutbox(1, sender[0]);
+            resultList = kavenegar.LatestOutbox(1);
+            resultList = kavenegar.LatestOutbox(1, sender[0]);
             #endregion
 
             #region LatestOutboxAsync 
-            List<ReceiveResult> receiveResult = await kavenegar.Receive(sender[0], 0);
-            List<ReceiveResult> ReceiveResult = await kavenegar.Receive(sender[0], 1);
+            List<ReceiveResult> receiveResult = kavenegar.Receive(sender[0], 0);
+            List<ReceiveResult> ReceiveResult = kavenegar.Receive(sender[0], 1);
             #endregion
 
             #region sendAsync
-            result = await kavenegar.Send(sender[0], receptor[0], message[0]);
-            result = await kavenegar.Send(sender[0], receptor[0], message[0], localIDs[0].ToString());
+            result = kavenegar.Send(sender[0], receptor[0], message[0]);
+            result = kavenegar.Send(sender[0], receptor[0], message[0], localIDs[0].ToString());
             #endregion
 
             #region sendArrayAsync
-            resultList = await kavenegar.SendArray(sender.ToList(), receptor.ToList(), message.ToList(), localIDs[0]);
-            resultList = await kavenegar.SendArray(sender[0], receptor.ToList(), message.ToList(), localIDs[0]);
+            resultList = kavenegar.SendArray(sender.ToList(), receptor.ToList(), message.ToList(), localIDs[0]);
+            resultList = kavenegar.SendArray(sender[0], receptor.ToList(), message.ToList(), localIDs[0]);
             #endregion
 
             #region VerifyLookupAsync
             
             //verify is template neme, you can create template from here https://panel.kavenegar.com/Client/Verification/Create
-            result = await kavenegar.VerifyLookup(receptor[0], "123", "verify");
+            result = kavenegar.VerifyLookup(receptor[0], "123", "verify");
             
             //rate is template neme, you can create template from here https://panel.kavenegar.com/Client/Verification/Create
-            result = await kavenegar.VerifyLookup(receptor[0], "123", null, null, null, "token20", "rate", VerifyLookupType.Sms);
+            result = kavenegar.VerifyLookup(receptor[0], "123", null, null, null, "token20", "rate", VerifyLookupType.Sms);
             #endregion
 
             return View();
