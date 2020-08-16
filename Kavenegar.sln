@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kavenegar", "Kavenegar\Kavenegar.csproj", "{28209ADB-60BA-4E6C-B802-B2CC0AB85181}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDotNetPakages", "TestDotNetPakages\TestDotNetPakages.csproj", "{C509AC59-BE53-487C-B966-B4909F15F83E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28209ADB-60BA-4E6C-B802-B2CC0AB85181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28209ADB-60BA-4E6C-B802-B2CC0AB85181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28209ADB-60BA-4E6C-B802-B2CC0AB85181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28209ADB-60BA-4E6C-B802-B2CC0AB85181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C509AC59-BE53-487C-B966-B4909F15F83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C509AC59-BE53-487C-B966-B4909F15F83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C509AC59-BE53-487C-B966-B4909F15F83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C509AC59-BE53-487C-B966-B4909F15F83E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EFDD0CB-9DC0-461A-B60C-099F8EF123A4}
+	EndGlobalSection
+EndGlobal
